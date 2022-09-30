@@ -26,7 +26,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Nunito', sans-serif;
-max-height: 800px;
+    max-height: 800px;
 
     /* overflow-x: hidden; */
 }
@@ -56,6 +56,7 @@ header .logo {
 }
 
 header .nav-links a {
+    flex: 0 0 auto;
     font-size: 1.7rem;
     border-radius: 0.5rem;
     padding: .5rem 1.5rem;
@@ -85,7 +86,7 @@ header .icon i {
 }
 
 header {
-    
+
     display: flex;
     align-items: center;
     padding: 1rem 7%;
@@ -118,70 +119,54 @@ section img {
     flex: 1 1 45rem;
 }
 
-.home .content span{
+.home .content span {
     color: var(--green);
     font-size: 2.5rem;
 }
 
-.home .content h3{
+.home .content h3 {
     color: var(--black);
     font-size: 6rem;
 }
 
-.home .content p{
+.home .content p {
     color: var(--black);
     font-size: 2rem;
     padding: .5rem;
 }
 
+#bars{
+    display: none;
+}
 
 
 
-@media  (max-width : 480px) {
 
-    header .logo{
-        color: red;
-    }
- 
+/* media queries */
+
+@media screen and (max-width : 992px) {
+
+
+
     .home {
-        text-align: center;
-    
-        
+        display: block;
+        align-items: center;
+        padding-top: 7rem;
     }
 
-    .home .content{
-        padding-top: 6rem;
+
+
+
+
+
+    header .logo {
+
+        color: blue;
     }
-
-    .home .content h3{
-        font-size: 3.9rem;
-        padding: .7rem;
-        box-shadow: var(--box-shadow);
-
-}
-.home .content p{
-    font-size: 2.5rem;
-    margin-top: 4rem;
 }
 
-section img {
-    
-    height: 350px;
-    width: 350px;
-}
-}
-
-
-
-
-
-@media screen and (max-width : 992px){
-
-header .logo{
-
-    color: blue;
-}
-
+/*  
+ }
 
 section img {
     border-radius: 50%;
@@ -218,4 +203,70 @@ section img {
     padding: .5rem;
 }
 
+}*/
+
+@media (max-width
+ : 768px) {
+
+    #bars{
+        display: block;
+    }
+    header .icon{
+        display: flex;
+    }
+
+    header .logo {
+        color: var(--green);
+    }
+
+    header .nav-links {
+        position: absolute;
+        top: 11.5%;
+        right: 0;
+        left: 0;
+        padding: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+    background: var(--light-color);
+
+    }
+    header .nav-links a{
+        position:relative;
+        z-index: 3;
+        display: block;
+        padding: 1rem;
+        margin: 1rem ;
+        font-size: 2rem;
+        background:var(--light-color);
+    }
+  
+
+    .home {
+    
+        text-align: center;
+
+
+    }
+
+    .home .content {
+        padding-top: 6rem;
+    }
+
+    .home .content h3 {
+        font-size: 3.9rem;
+        padding: .7rem;
+        box-shadow: var(--box-shadow);
+
+    }
+
+    .home .content p {
+        font-size: 2.5rem;
+        margin-top: 4rem;
+    }
+
+    section img {
+
+        height: 350px;
+        width: 350px;
+    }
 }
